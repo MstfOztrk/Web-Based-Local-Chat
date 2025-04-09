@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "bocqAJFBN3DrpgvkCkyc8Zoewrz339Q616xO4UodHkJ8MvmI8VH9jlfx/XaR8DaQzDv3t9Vxa9MSlWhNNo/M/Q==",
+  "success": true,
+  "projectFilePath": "F:\\OtherProjects\\LocalServer\\localserver\\LocalServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mustafa\\.nuget\\packages\\httpmultipartparser\\9.0.0\\httpmultipartparser.9.0.0.nupkg.sha512",
+    "C:\\Users\\Mustafa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Mustafa\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
+    "C:\\Users\\Mustafa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Mustafa\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
