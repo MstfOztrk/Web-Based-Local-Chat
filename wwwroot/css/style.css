@@ -26,37 +26,58 @@ button, input { font-family: inherit; outline: none; }
 
 .messages-area { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column-reverse; gap: 8px; background-image: radial-gradient(#222 1px, transparent 1px); background-size: 20px 20px; }
 
-/* Mesaj Balonları */
+/* --- MESAJ BALONLARI --- */
 .message {
     padding: 8px 12px;
     border-radius: 12px;
-    max-width: 65%;       /* EKRANIN %65'İNİ GEÇEMESİN */
-    width: fit-content;   /* Sadece içindeki yazı kadar yer kaplasın */
+    max-width: 70%;
+    width: fit-content; /* Baloncuğu içeriğe göre sıkıştır */
     position: relative;
-    word-wrap: break-word; /* Uzun yazıları alt satıra kır */
+    word-wrap: break-word;
     font-size: 0.95rem;
     line-height: 1.4;
     animation: fadeIn 0.2s ease;
-    display: flex;        /* İçerik düzeni için */
+    display: flex;
     flex-direction: column;
 }
+
 .message.others { align-self: flex-start; background: #2d2d2d; color: #ddd; border-bottom-left-radius: 2px; }
 .message.mine { align-self: flex-end; background: #005a9e; color: white; border-bottom-right-radius: 2px; }
 
 .message .nick { font-weight: bold; font-size: 0.75rem; margin-bottom: 2px; display: block; color: #76b9ed; }
-.message.mine .nick { display: none; } /* Kendi mesajımda nick yazmasın */
+.message.mine .nick { display: none; } 
 .message .time { font-size: 0.65rem; color: rgba(255,255,255,0.5); float: right; margin-left: 10px; margin-top: 5px; }
 .message .del-btn { position: absolute; top: -8px; right: -8px; background: #cf0000; color: white; width: 18px; height: 18px; border-radius: 50%; text-align: center; line-height: 16px; font-size: 12px; cursor: pointer; display: none; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 .message:hover .del-btn { display: block; }
 
+/* --- MEDYA İÇERİKLERİ (RESİM/VİDEO) --- */
 .media-content {
     display: block;
-    max-width: 100%;      /* Baloncuğun dışına asla taşmasın */
+    max-width: 100%;
     border-radius: 8px;
     margin-top: 5px;
-    object-fit: cover;    /* Oranları koruyarak sığdır */
+    object-fit: cover;
 }
-.media-audio { width: 250px; margin-top: 5px; }
+
+/* Resim ve Videoları Sınırla (Devasa olmasın) */
+.message .body img, 
+.message .body video {
+    max-width: 300px !important;
+    max-height: 300px !important;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* --- SES DOSYASI (AUDIO) DÜZELTMESİ --- */
+.media-audio {
+    width: 260px !important; /* Genişliği sabitle */
+    height: 40px !important; /* Yüksekliği standart yap */
+    margin-top: 5px;
+    border-radius: 20px;
+    outline: none;
+    /* object-fit kaldırdık çünkü ses dosyası "cover" yapılmaz, boşluk yaratır */
+}
 
 /* Alt Panel & Upload */
 .chat-footer { background: #1e1e1e; padding: 10px; border-top: 1px solid #333; display: flex; flex-direction: column; gap: 10px; }
@@ -71,31 +92,7 @@ button, input { font-family: inherit; outline: none; }
 
 /* Kayıt Animasyonu */
 .mic-btn.recording { background: #cf0000; color: white; animation: pulseRed 1.5s infinite; }
-.message .body img, 
-.message .body video {
-    max-width: 300px !important; /* Maksimum genişlik 300px olsun */
-    max-height: 300px !important; /* Maksimum yükseklik 300px olsun */
-    width: auto;
-    height: auto;
-    border-radius: 8px;
-}
-.media-audio {
-    width: 240px !important; /* Ses oynatıcı çok uzamasın */
-    margin-top: 5px;
-}
-.message.mine {
-    margin-left: auto; /* Sağa yasla */
-    background: #005a9e;
-    color: white;
-    border-bottom-right-radius: 2px;
-}
 
-.message.others {
-    margin-right: auto; /* Sola yasla */
-    background: #2d2d2d;
-    color: #ddd;
-    border-bottom-left-radius: 2px;
-}
 @keyframes pulseRed { 0% { box-shadow: 0 0 0 0 rgba(207, 0, 0, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(207, 0, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(207, 0, 0, 0); } }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideUp { from { height: 0; opacity: 0; } to { height: auto; opacity: 1; } }

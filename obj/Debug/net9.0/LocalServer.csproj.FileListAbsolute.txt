@@ -53,6 +53,6 @@ f:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\LocalServer.pdb
 f:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\LocalServer.genruntimeconfig.cache
 f:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\ref\LocalServer.dll
 F:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\compressed\b4qwleqs23-760a69jeoc.gz
-F:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\compressed\u98yq2n3wu-rrdm5151tf.gz
 F:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\compressed\l0la2gfx84-cs7p9fgz8v.gz
-F:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\compressed\cmryte2xrk-21gmwtl09d.gz
+F:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\compressed\cmryte2xrk-9b6npbty01.gz
+F:\OtherProjects\Web-Based-Local-Chat\obj\Debug\net9.0\compressed\u98yq2n3wu-5zaopk0cwa.gz

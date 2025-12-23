@@ -40,7 +40,7 @@ async function loadMessages() {
                 // HTML classlarını ekle (CSS için)
                 content = content.replace('<img', '<img class="media-content"');
                 content = content.replace('<video', '<video class="media-content"');
-                content = content.replace('<audio', '<audio class="media-audio"');
+                content = content.replace('<audio', '<audio class="media-audio"'); 
 
                 div.innerHTML = `
                     <div class="del-btn" onclick="deleteMsg('${msg.id}')">×</div>
