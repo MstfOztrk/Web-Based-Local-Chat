@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobi - Giriş</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="lobby-container">
+        <div class="lobby-box">
+            <h1 style="margin:0 0 10px 0; color:#0078d4">CHAT LOBİ</h1>
+            <p style="color:#777; margin-bottom:20px">Bir oda seç ve sohbete dal</p>
+
+            <form action="chat.html" method="GET" id="loginForm">
+                <input type="text" name="nick" id="nickInput" class="lobby-input" placeholder="Rumuzunuz (Nick)" required autocomplete="off">
+                <input type="hidden" name="channelId" id="channelIdInput">
+                
+                <div class="channel-list" id="channelList">
+                    </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:15px" id="joinBtn" disabled>ODAYA GİR</button>
+            </form>
+
+            <hr style="border-color:#333; margin:20px 0">
+            
+            <details>
+                <summary style="cursor:pointer; color:#888">Yeni Oda Kur</summary>
+                <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px">
+                    <input id="newChName" class="lobby-input" style="margin:0" placeholder="Oda Adı">
+                    <input id="newChIcon" class="lobby-input" style="margin:0" placeholder="Emoji (💬)">
+                    <input id="newChDesc" class="lobby-input" style="margin:0" placeholder="Açıklama">
+                    <button type="button" class="btn btn-primary" onclick="createChannel()">Oluştur</button>
+                </div>
+            </details>
+        </div>
+    </div>
+    <script src="js/lobby.js"></script>
+</body>
+</html>

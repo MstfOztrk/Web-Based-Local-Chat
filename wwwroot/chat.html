@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sohbet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="chat-header">
+        <div style="display:flex; align-items:center">
+            <button class="btn btn-primary" id="voiceCallBtn" style="border-radius:20px; font-size:0.9rem; height:36px" onclick="toggleCall()">
+                📞 <span id="callText">Katıl</span>
+            </button>
+            <div id="statusPill" class="status-pill">Sessiz</div>
+        </div>
+        <button onclick="window.location.href='/'" class="btn-danger">ÇIKIŞ</button>
+    </div>
+
+    <div class="messages-area" id="messagesDiv">
+        </div>
+
+    <div class="chat-footer">
+        <div id="previewArea" style="display:none;" class="preview-box">
+            <img id="previewImg" class="preview-thumb" style="display:none">
+            <div id="previewFileIcon" style="font-size:24px; display:none">📄</div>
+            <div id="previewName" class="preview-info">Dosya.jpg</div>
+            <button class="close-preview" onclick="clearFile()">×</button>
+        </div>
+
+        <div class="input-row">
+            <input type="file" id="fileInput" style="display:none" onchange="handleFileSelect()">
+            
+            <button class="btn btn-icon" onclick="document.getElementById('fileInput').click()">📎</button>
+            
+            <input type="text" id="msgInput" class="chat-input" placeholder="Mesaj yaz..." autocomplete="off">
+            
+            <button class="btn btn-icon mic-btn" id="micBtn">🎤</button>
+            
+            <button class="btn btn-primary btn-icon" style="background:#0078d4; color:white" onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
